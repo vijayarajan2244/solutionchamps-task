@@ -9,6 +9,7 @@ const Search = () => {
 
     const [filterData, setFilterData] = useState([]);
     const [data, setData] = useState([]);
+    const [noResult, setNoResult] = useState(false);
 
     useEffect(() => {
         setFilterData(card);
@@ -20,7 +21,7 @@ const Search = () => {
             return item.title.toLowerCase().includes((event.target.value).toLowerCase())
         })
         event.target.value.trim().length > 0 ? setData(finalData) : setData([])
-
+        finalData.length === 0 ? setNoResult(true) : setNoResult(false);
     }
 
 
@@ -53,7 +54,8 @@ const Search = () => {
                                 {data.map((item) => {
                                     return <SearchContactCard logo={item.logo} name={item.name} title={item.title} key={item.id}></SearchContactCard>
                                 })}
-
+                                
+                                {noResult ? <p className='mt-5 text-center fw-medium no-result'>No Result Found...</p> : null}
                             </div>
                         </div>
                     </div>

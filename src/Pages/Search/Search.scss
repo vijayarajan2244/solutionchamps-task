@@ -40,4 +40,8 @@
         background-color: $nav-bg;
         border-radius: 0 0 5px 5px;
     }
+
+    .no-result{
+        color: $search-placeholder;
+    }
 }
