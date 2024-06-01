@@ -7,7 +7,7 @@ import HamburgerIcon from '../../components/Svgs/HamburgerIcon';
 
 const Search = () => {
 
-    const [filterData, setFilterData] = useState('');
+    const [filterData, setFilterData] = useState([]);
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ const Search = () => {
     const handleSearch = (event) => {
 
         const finalData = filterData.filter((item) => {
-            return item.title.toLowerCase().includes(event.target.value)
+            return item.title.toLowerCase().includes((event.target.value).toLowerCase())
         })
         event.target.value.trim().length > 0 ? setData(finalData) : setData([])
 

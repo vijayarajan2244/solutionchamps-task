@@ -30,27 +30,17 @@ const Sidebar = () => {
               </div>
 
               <div className="dropdown profile-dropdown mt-4">
-                <button className="btn btn-profile d-flex align-items-center w-100 gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="btn btn-profile d-flex align-items-center w-100 gap-2" type="button">
                   <img src={Profile} alt="Profile" className='rounded-circle' />
                   <p className='fw-medium fs-16'>Abishek</p>
                 </button>
-                <ul className="dropdown-menu">
-                  <li>
-
-                  </li>
-                </ul>
               </div>
 
               <div className="dropdown mt-2 pt-1">
-                <button className="btn btn-create d-flex align-items-center w-100 gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className="btn btn-create d-flex align-items-center w-100 gap-2" type="button">
                   <img src={Plus} alt="Plus" className='' />
                   <p className='fw-medium fs-16'>Create</p>
                 </button>
-                <ul className="dropdown-menu">
-                  <li>
-
-                  </li>
-                </ul>
               </div>
 
               <div className='mt-2 pt-1' data-bs-dismiss="offcanvas" aria-label="Close">

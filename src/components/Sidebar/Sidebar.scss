@@ -114,6 +114,7 @@
 
         p {
             font-weight: 500;
+            font-size: clamp(1rem, 1vw, 1.2rem) !important;
         }
     }
 }

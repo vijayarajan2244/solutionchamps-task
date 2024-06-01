@@ -1,7 +1,11 @@
+@import './fonts';
 @import './_reset';
 @import './_variables';
 @import './_mixins';
 
+body{
+    font-family: 'Inter', sans-serif;
+}
 
 //Pre Style
 .img-cover {

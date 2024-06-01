@@ -55,6 +55,9 @@
     .title{
         min-height: 48px;
         @include line-clamp(2);
+        @media screen and (max-width:767px) {
+            min-height: auto;
+        }
     }
 }
 
