@@ -71,7 +71,7 @@ const Sidebar = () => {
                 </NavLink>
               </li>
               <li data-bs-dismiss="offcanvas" aria-label="Close">
-                <NavLink to={'/contacts'}>
+                <NavLink to={'/'}>
                   <ContactsIcon></ContactsIcon>
                   <p>Contacts</p>
                 </NavLink>

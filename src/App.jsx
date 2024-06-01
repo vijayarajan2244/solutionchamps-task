@@ -13,7 +13,7 @@ function App() {
         <Sidebar></Sidebar>
         <div className='main-wrapper'>
           <Routes>
-            <Route path='/contacts' element={<Contact></Contact>}></Route>
+            <Route path='/' element={<Contact></Contact>}></Route>
             <Route path='/search' element={<Search></Search>}></Route>
           </Routes>
         </div>
