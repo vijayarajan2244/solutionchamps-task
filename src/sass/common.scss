@@ -1,0 +1,108 @@
+@import './_reset';
+@import './_variables';
+@import './_mixins';
+
+
+//Pre Style
+.img-cover {
+    img {
+        @include w-h(100%, 100%);
+        object-fit: cover;
+    }
+}
+
+.img-contain {
+    img {
+        @include w-h(100%, 100%);
+        object-fit: contain;
+    }
+}
+
+//Font Size
+.fs-10 {
+    font-size: clamp(0.7rem, 0.7vw, 0.9rem) !important;
+}
+
+.fs-12 {
+    font-size: clamp(0.8rem, 0.8vw, 1rem) !important;
+}
+
+.fs-14 {
+    font-size: clamp(0.9rem, 0.9vw, 1.1rem) !important;
+}
+
+.fs-16 {
+    font-size: clamp(1rem, 1vw, 1.2rem) !important;
+}
+
+.fs-18 {
+    font-size: clamp(1rem, 1.25vw, 1.25rem) !important;
+}
+
+.fs-20 {
+    font-size: clamp(1.1rem, 1.3vw, 1.3rem) !important;
+}
+
+.fs-23 {
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem) !important;
+}
+
+.fs-25 {
+    font-size: clamp(1.2rem, 1.6vw, 1.7rem) !important;
+}
+
+.fs-28 {
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem) !important;
+}
+
+.fs-30 {
+    font-size: clamp(1.2rem, 2vw, 1.9rem) !important;
+}
+
+.fs-35 {
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem) !important;
+}
+
+.fs-40 {
+    font-size: clamp(1.3rem, 2.6vw, 2.7rem) !important;
+}
+
+.fs-45 {
+    font-size: clamp(1.5rem, 3vw, 3rem) !important;
+}
+
+
+//Common Styling
+.main-wrapper {
+    width: calc(100% - 231px);
+    margin-left: auto;
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+    }
+}
+
+.background-pale {
+    background-color: $nav-bg;
+    height: 100vh;
+}
+
+.header-main {
+    padding: 0 30px;
+    color: $theme-black;
+    border-bottom: 1px solid $nav-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    @media screen and (max-width:767px) {
+        padding: 0 19px;
+    }
+
+    .hamburger {
+        border-radius: 8px;
+        border: 1px solid $nav-border;
+        background: $white;
+        padding: 4px 6px;
+    }
+}

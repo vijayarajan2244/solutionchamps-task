@@ -1,0 +1,68 @@
+@import '../../sass/common.scss';
+
+
+.contacts-card{
+    .card-header,
+    .card-body,
+    .card-footer{
+        padding: 10px 15px;
+        background-color: $white;
+    }
+    h1,p{
+        color: $main-txt;
+    }
+    
+    .card-header:first-child{
+        border-radius: 8px 8px 0 0;
+        border-bottom-color: $nav-border;
+    }
+    .card-footer:last-child{
+        border-top-color: $nav-border;
+        border-radius: 0 0 8px 8px;
+    }
+    .card{
+        border-color: $nav-border;
+        .card-body{
+            padding: 16px 15px;
+        }
+    }
+
+    .contacts-logo{
+        @include w-h(23px, 23px);
+    }
+    .card-list-ul{
+        li{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 11px;
+            p{
+                font-weight: 400;
+            }
+            &:last-child{
+                margin-bottom: unset;
+            }
+        }
+    }
+    .card-footer{
+        p{
+            color: $secondary-txt;
+        }
+    }
+    .name{
+        @include line-clamp(1);
+    }
+    .title{
+        min-height: 48px;
+        @include line-clamp(2);
+    }
+}
+
+.search-card-box{
+    border-radius: 8px;
+    border: 1px solid $nav-border;
+    background: $white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    margin-top: 15px;
+}

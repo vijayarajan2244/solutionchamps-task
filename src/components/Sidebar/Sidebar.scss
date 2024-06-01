@@ -1,0 +1,119 @@
+@import '../../sass/common.scss';
+
+
+.sidebar-canvas{
+    max-width: 293px;
+    @media screen and (min-width:768px) {
+        max-width: 231px;
+        visibility: visible;
+        transform: unset !important;
+    }
+}
+
+.sidebar-main {
+    @include w-h(231px, 100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $theme-black;
+    color: $white;
+    transition: 0.3s all;
+    z-index: 1;
+    @media screen and (max-width:767px) {
+        @include w-h(293px, 100%);
+    }
+
+    .padding-wrapper {
+        padding: 17px 10px;
+    }
+
+    .site-logo {
+        a {
+            display: block;
+            @include w-h(180px, auto);
+        }
+    }
+
+    .profile-dropdown {
+        .btn-profile {
+            @include dropdown($main-txt, 54px);
+        }
+
+        img {
+            @include w-h(34px, 34px);
+        }
+    }
+
+    .btn-create {
+        &:active {
+            background-color: $theme-green
+        }
+
+        @include dropdown($theme-green, 43px);
+    }
+
+    .navbar-search {
+        background-color: $main-txt;
+        color: $white;
+        border-radius: 8px;
+        height: 43px;
+        padding: 8px 15px;
+
+        .input-group-text,
+        .form-control {
+            background-color: unset;
+            border: unset;
+            padding: unset;
+        }
+
+        .form-control {
+            cursor: pointer;
+
+            &::placeholder {
+                font-size: 16px;
+                font-weight: 500;
+                color: $secondary-txt;
+            }
+        }
+    }
+
+    .navigation-ul {
+        a {
+            display: flex;
+            align-items: center;
+            @include w-h(100%, 50px);
+            transition: 0.3s all;
+            border-left: 3px solid $theme-black;
+            color: $white;
+            gap: 9px;
+            padding: 17px 10px;
+
+            &:hover {
+                background-color: $menu-hover;
+                transition: 0.3s all;
+                border-left: 3px solid $theme-green;
+
+                svg rect {
+                    transition: 0.3s all;
+                    fill: $theme-green;
+                }
+            }
+
+            &.active {
+                border-left: 3px solid $theme-black;
+                background-color: $menu-hover;
+                transition: 0.3s all;
+                border-left: 3px solid $theme-green;
+
+                svg rect {
+                    transition: 0.3s all;
+                    fill: $theme-green;
+                }
+            }
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+}
