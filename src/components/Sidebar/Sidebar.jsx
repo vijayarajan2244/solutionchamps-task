@@ -19,7 +19,7 @@ const Sidebar = () => {
     <>
       
 
-      <div className="offcanvas offcanvas-start sidebar-canvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div className="offcanvas offcanvas-start sidebar-canvas" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div className="offcanvas-body">
           <div className={`sidebar-main`}>
             <div className='padding-wrapper'>
